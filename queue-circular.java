@@ -70,7 +70,5 @@ class QueueX {
         else
             return false;
     }
-    
-
 
 }
