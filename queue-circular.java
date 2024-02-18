@@ -6,6 +6,7 @@ class QueueX {
     private int nItems;     //no of items of the queue
 
     private int temp;
+    private int tempclear;
 
     public QueueX (int s) {
         maxSize = s;        // set array size
@@ -46,10 +47,11 @@ class QueueX {
         }
     }
 
+    //peekFront() method is same as queue-linear.java
     public int peekFront() { 
         if (nItems == 0) {
             System.out.println("Queue is empty");
-            return -99; 
+            return -99;
         }
         else {
             return queArray[front]; 
@@ -71,4 +73,21 @@ class QueueX {
             return false;
     }
 
+}
+
+class UseQueue {
+    public static void main(String[] args) {
+        QueueX MyQueue = new QueueX(10);
+
+        MyQueue.insert(10);
+        MyQueue.insert(25);
+        MyQueue.insert(55);
+        MyQueue.insert(65);
+        MyQueue.insert(85);
+
+        while (!MyQueue.isEmpty()) {
+            int tempclear = MyQueue.remove();
+            System.out.println(tempclear);
+        }
+    }
 }

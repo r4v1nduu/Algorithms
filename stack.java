@@ -15,6 +15,7 @@ class StackX {
             System.out.println("Stack is full");
         else
             stackArray[++top] = j;
+            //increment top by 1, then insert j to the array-top location
     }
 
     public double pop() {
@@ -22,6 +23,7 @@ class StackX {
             return -99;
         else
             return stackArray[top--];
+            //decrement top by 1, then return the value at the array-top location
     }
     
     public double peek() {
@@ -29,6 +31,7 @@ class StackX {
             return -99;
         else
             return stackArray[top];
+            //return the value at the top index
     }
     
     public boolean isEmpty() {
