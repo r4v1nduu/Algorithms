@@ -1,0 +1,9 @@
+Stacks
+  - GetCount method to return no. of items in the Stacks
+  - Stack to Save Characters
+
+Queues
+  - Paranthesis checker
+  - Transcation ID and amount stores in a queue.
+    EvenQueue and OddQueue to store main queue divided.
+    Print divided queues seperately.
