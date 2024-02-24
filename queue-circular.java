@@ -6,7 +6,7 @@ class QueueX {
     private int nItems;     //no of items of the queue
 
     private int temp;
-    private int tempclear;
+    public int tempClear;
 
     public QueueX (int s) {
         maxSize = s;        // set array size
@@ -86,8 +86,8 @@ class UseQueue {
         MyQueue.insert(85);
 
         while (!MyQueue.isEmpty()) {
-            int tempclear = MyQueue.remove();
-            System.out.println(tempclear);
+            int tempClear = MyQueue.remove();
+            System.out.println(tempClear);
         }
     }
 }
