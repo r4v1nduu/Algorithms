@@ -19,7 +19,7 @@ class QueueX {
         // check whether queue is full
         if (rear == maxSize - 1)
         //(-1), because array indexing starts with 0
-               System.out.println("Queue is full");
+            System.out.println("Queue is full");
         else {
             queArray[++rear] = j;
             //increment rear by 1, then insert j to the array-rear location

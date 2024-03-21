@@ -3,12 +3,12 @@ package Java;
 class StackX {
     private int maxSize;    // size of stack array
     private double[] stackArray;
-    private int top;           //top of the stack
+    private int top;        // top of the stack
 
-    public StackX (int s) {   // constructor     
-        maxSize = s;       // set array size
+    public StackX (int s) { // constructor     
+        maxSize = s;        // set array size
         stackArray = new double[maxSize];
-        top = -1;             // no items
+        top = -1;           // no items
     }
 
     public void push(double j) {
