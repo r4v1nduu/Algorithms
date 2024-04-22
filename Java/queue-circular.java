@@ -43,7 +43,7 @@ class QueueX {
             if (front == maxSize) {
                 front = 0;
                 //reset front to 0, if front is at the end of the array (next front will be at 0)
-            }
+            }-
             nItems--;
             return temp;
         }
