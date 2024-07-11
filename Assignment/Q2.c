@@ -3,28 +3,26 @@
 
 #define MAX 5
 
-void printPaths(int n, int m, int array[MAX][MAX], int cRow, int cCoulmn, int right, int down, int idx, int *path, int *pathValue, int *count) {
+void printPaths(int n, int m, int array[MAX][MAX], int cRow, int cCoulmn, int right, int down, int index, int *path, int *pathValue, int *count) {
     if (right == 0 && down == 0) {
         //Total number of moves is (n+m-2)
         for (int i = 0; i < n+m-3; i++) {
-            if (pathValue[i] == 1 && path[i] != path[i + 1]) {
-                return;
-            }
+            if (pathValue[i] == 1 && path[i] != path[i + 1]) {return;}
         }
         (*count)++;
         return;
     }
 
     if (right > 0) {
-        path[idx] = 1;
-        pathValue[idx] = array[cRow][cCoulmn + 1];
-        printPaths(n, m, array, cRow, cCoulmn + 1, right - 1, down, idx + 1, path, pathValue, count);
+        path[index] = 1;
+        pathValue[index] = array[cRow][cCoulmn+1];
+        printPaths(n, m, array, cRow, cCoulmn+1, right-1, down, index+1, path, pathValue, count);
     }
 
     if (down > 0) {
-        path[idx] = 0;
-        pathValue[idx] = array[cRow + 1][cCoulmn];
-        printPaths(n, m, array, cRow + 1, cCoulmn, right, down - 1, idx + 1, path, pathValue, count);
+        path[index] = 0;
+        pathValue[index] = array[cRow+1][cCoulmn];
+        printPaths(n, m, array, cRow+1, cCoulmn, right, down-1, index+1, path, pathValue, count);
     }
 }
 
